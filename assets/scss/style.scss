@@ -1,0 +1,817 @@
+// ============================
+//         Allgemeines
+// ============================
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 30%;
+}
+
+@font-face {
+    font-family: lora-bold;
+    src: url("../fonts/Lora-Bold.ttf");
+}
+
+@font-face {
+    font-family: lora-regular;
+    src: url("../fonts/Lora-Regular.ttf");
+}
+
+@font-face {
+    font-family: workSans-light;
+    src: url("../fonts/WorkSans-Light.ttf");
+}
+
+@font-face {
+    font-family: workSans-regular;
+    src: url("../fonts/WorkSans-Regular.ttf");
+}
+
+html {
+    font-size: 10px;
+}
+
+h1,
+h2 {
+    font-family: lora-bold;
+    font-size: 9rem;
+}
+
+.fontSmall {
+    font-size: 1.6rem;
+}
+
+.fontBig {
+    font-size: 3.2rem;
+}
+
+// ============================
+//         header
+// ============================
+
+header {
+    color: #ffff;
+    background-color: black;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 10rem;
+
+    .line {
+        width: 100%;
+        height: 15vh;
+        position: absolute;
+    }
+
+    // div {
+    //     width: 50%;
+    //     height: 30vh;
+    //     border-right: 1px solid rgba(255, 255, 255, 0.2);
+    //     translate: -50% -50%;
+    // }
+
+    section {
+        &:nth-of-type(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            text-align: center;
+            margin-top: 30vh;
+
+            h1 {
+                line-height: 0.8;
+            }
+
+            p {
+                line-height: 4;
+            }
+
+            span {
+                -webkit-text-fill-color: black;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: white;
+            }
+        }
+
+        &:nth-of-type(2) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 2vh;
+
+            img {
+                width: 5%;
+            }
+
+            button {
+                padding: 1rem 3rem;
+                background-color: black;
+                color: #ffff;
+                border: 1px #ffff solid;
+            }
+        }
+
+    }
+}
+
+// ============================
+//         main section Last year
+// ============================
+
+main {
+    font-size: 1.6rem;
+
+    section {
+
+        &:nth-of-type(1) {
+            display: flex;
+            flex-direction: column;
+            padding: 10rem;
+            color: #ffff;
+            background-color: black;
+            background-image: url("../img/map.svg");
+            background-size: 45%;
+            background-repeat: no-repeat;
+            background-position: right bottom 30vh;
+
+
+            h2 {
+                width: 85%;
+                z-index: 2;
+            }
+
+            article {
+                padding: 10vh 0;
+
+                p {
+                    font-size: 7rem;
+                }
+            }
+        }
+
+        // ============================
+        //         main section stuck
+        // ============================
+
+        &:nth-of-type(2) {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                margin-top: 30rem;
+                margin-bottom: 40rem;
+                width: 30%;
+                line-height: 2;
+
+            }
+
+            img {
+                width: 20%;
+                position: absolute;
+
+                &:nth-of-type(1) {
+                    position: absolute;
+                    right: 100px;
+                    top: -100px;
+                }
+
+                &:nth-of-type(2) {
+                    position: absolute;
+                    left: 0px;
+                    top: 200px;
+                }
+
+                &:nth-of-type(3) {
+                    position: absolute;
+                    right: 0px;
+                    top: 500px;
+                }
+
+                &:nth-of-type(4) {
+                    position: absolute;
+                    left: 200px;
+                    top: 800px;
+                }
+
+                &:nth-of-type(5) {
+                    position: absolute;
+                    right: 150px;
+                    top: 900px;
+                }
+
+                &:nth-of-type(6) {
+                    position: absolute;
+                    left: 0px;
+                    top: 1200px;
+                }
+
+                &:nth-of-type(7) {
+                    position: absolute;
+                    right: 200px;
+                    bottom: -50px;
+                }
+            }
+
+            article {
+                width: 35%;
+                margin: 30rem 0;
+
+                h2 {
+                    line-height: 0.8;
+                }
+
+                p {
+                    margin-top: 2rem;
+                    line-height: 2;
+                    width: 100%;
+                }
+
+            }
+        }
+
+        // ==================================
+        //         main section golden bear
+        // ====================================
+
+        &:nth-of-type(3) {
+            color: #ffff;
+            background-color: black;
+            display: grid;
+            grid-template-columns: 0.7fr 1fr 1fr;
+            grid-template-rows: 1fr 2fr;
+            grid-template-areas: "goldenBear . text"
+                "imgGoldenBear1 imgGoldenBear1 imgGoldenBear2";
+            align-items: end;
+            padding: 10rem 9rem 0 9rem;
+
+            article {
+
+                &:nth-of-type(1) {
+                    grid-area: goldenBear;
+
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: text;
+
+                    p {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+
+            img {
+
+                &:nth-of-type(1) {
+                    grid-area: imgGoldenBear1;
+                    width: 100%;
+                    translate: 10%;
+                    position: relative;
+                    top: 10vh;
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: imgGoldenBear2;
+                    width: 100%;
+                    position: relative;
+                    top: 2vh;
+                }
+            }
+        }
+
+        // ==================================
+        //         main section poppy bear
+        // ====================================
+        &:nth-of-type(4) {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr 2fr;
+            grid-template-areas:
+                "theCircle theCircle"
+                "poppyBear text"
+                "imgGoldenPoppy1 imgGoldenPoppy2";
+            align-items: start;
+            padding: 10rem 9rem 0 9rem;
+            overflow: hidden;
+
+            article {
+
+                p {
+                    margin-bottom: 2rem;
+                }
+
+                margin-bottom: 10rem;
+
+                &:nth-of-type(1) {
+                    grid-area: poppyBear;
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: text;
+                    padding-left: 25rem;
+                }
+            }
+
+            img {
+
+                &:nth-of-type(1) {
+                    grid-area: theCircle;
+                    width: 30%;
+                    translate: 1090px -200px;
+                    position: relative;
+                    z-index: -1;
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: imgGoldenPoppy1;
+                    width: 80%;
+                    position: relative;
+                    top: 35vh;
+                    left: 30%;
+                    z-index: 2;
+                }
+
+                &:nth-of-type(3) {
+                    grid-area: imgGoldenPoppy2;
+                    width: 100%;
+                    position: relative;
+                    z-index: 1;
+
+                }
+            }
+        }
+    }
+}
+
+footer {
+    font-size: 1.6rem;
+    padding: 9rem;
+    color: #ffff;
+    background-color: black;
+    overflow: hidden;
+
+    p {
+        margin: 1.5rem 0;
+    }
+
+    .banner {
+        background-color: #ffff;
+        font-size: 5rem;
+        color: black;
+        rotate: 45deg;
+        translate: 750px 282px;
+
+        span {
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+
+        }
+    }
+
+    img {
+        width: 20%;
+    }
+
+    section {
+
+        &:nth-of-type(1) {
+            width: 50%;
+
+            button {
+                padding: 1rem 3rem;
+                margin: 3rem 0;
+                background-color: black;
+                color: #ffff;
+                border: 1px solid #ffff;
+            }
+
+
+        }
+
+        &:nth-of-type(2) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            article {
+
+                &:nth-of-type(1) {
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+
+                }
+
+                &:nth-of-type(2) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+}
+
+
+// ==================================
+//         Animation Bild im Kreis
+// ====================================
+
+.animation {
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {}
+
+    100% {
+        rotate: 359deg;
+    }
+}
+
+// ==================================
+//         Animation Banner
+// ====================================
+
+.animationBanner {
+    animation-name: banner;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes banner {
+    0% {
+        translate: -450px;
+    }
+
+    50% {}
+
+    100% {
+        translate: 600px;
+    }
+}
+
+// ==================================
+//         Media Queries
+// ==================================
+
+@media only screen and (max-width: 600px) {
+
+    // ==================================
+    //         Header
+    // ==================================
+
+    header {
+        padding: 0 3rem;
+
+        section {
+
+            &:nth-of-type(1) {
+                width: 100%;
+
+                p {
+                    line-height: 2;
+                }
+
+                span {
+                    -webkit-text-fill-color: black;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: white;
+                }
+
+                h1 {
+                    font-size: 5rem;
+                }
+            }
+
+            &:nth-of-type(2) {
+                img {
+                    width: 20%;
+
+                }
+            }
+        }
+    }
+
+    h1,
+    h2 {
+        font-family: lora-bold;
+        font-size: 3rem;
+    }
+
+    // ==================================
+    //         Main Last Year
+    // ==================================
+
+    main {
+        section {
+            padding: 0 3rem;
+
+            &:nth-of-type(1) {
+                padding: 5rem 3rem;
+            }
+
+            &:nth-of-type(2) {
+                article {
+                    width: 100%;
+                }
+
+                p {
+                    // margin: 0;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+
+    // ============================
+    //         main section stuck
+    // ============================
+    main section {
+        &:nth-of-type(2) {
+
+            p {
+                margin: 7rem 0 2rem 0;
+                width: 100%;
+                line-height: 2;
+
+            }
+
+            img {
+                width: 100%;
+                margin: 2rem 0;
+
+
+                &:nth-of-type(1) {
+                    position: static;
+                }
+
+                &:nth-of-type(2) {
+                    position: static;
+
+                }
+
+                &:nth-of-type(3) {
+                    position: static;
+                }
+
+                &:nth-of-type(4) {
+                    position: static;
+                }
+
+                &:nth-of-type(5) {
+                    position: static;
+                }
+
+                &:nth-of-type(6) {
+                    position: static;
+                }
+
+                &:nth-of-type(7) {
+                    position: static;
+                }
+            }
+
+            article {
+                width: 100%;
+                margin: 0;
+
+                h2 {
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    width: 100%;
+                    margin: 0;
+                }
+
+            }
+        }
+    }
+
+
+    // ============================
+    //         main section golden bear
+    // ============================
+    main section {
+        &:nth-of-type(3) {
+            color: #ffff;
+            background-color: black;
+            display: block;
+            text-align: center;
+            padding: 0 3rem;
+
+            article {
+
+                &:nth-of-type(1) {
+                    padding: 4rem 0;
+
+                }
+
+                &:nth-of-type(2) {
+                    p {
+                        margin-bottom: 2rem;
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            img {
+
+                &:nth-of-type(1) {
+                    width: 100%;
+                    position: static;
+                    translate: none;
+                    // display: block;
+                    // margin: 0 2rem;
+                }
+
+                &:nth-of-type(2) {
+                    width: 100%;
+                    position: static;
+                    margin: 4rem 0;
+                }
+            }
+        }
+    }
+
+    // ==================================
+    //         main section poppy bear
+    // ====================================
+
+    main section {
+        &:nth-of-type(4) {
+            display: block;
+            padding: 3rem;
+            text-align: center;
+
+            article {
+
+                p {
+                    margin-bottom: 2rem;
+                }
+
+                margin-bottom: 10rem;
+
+                &:nth-of-type(1) {
+                    margin-bottom: 2rem;
+                }
+
+                &:nth-of-type(2) {
+                    padding-left: 0;
+
+                    p {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            img {
+                &:nth-of-type(1) {
+                    width: 30%;
+                    translate: 0 -7.2rem;
+                    position: relative;
+                }
+
+                &:nth-of-type(2) {
+                    width: 100%;
+                    position: static;
+                    margin: 3rem 0;
+                }
+
+                &:nth-of-type(3) {
+                    width: 100%;
+                    position: static;
+                }
+            }
+        }
+    }
+
+    // ==================================
+    //         Footer
+    // ====================================
+
+    footer {
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 2rem 3rem;
+
+        p {
+            margin: 1.5rem 0;
+        }
+
+        .banner {
+            background-color: #ffff;
+            font-size: 5rem;
+            color: black;
+            rotate: 45deg;
+            translate: 15.5rem;
+
+            span {
+                -webkit-text-fill-color: white;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+
+            }
+        }
+
+        img {
+            width: 20%;
+        }
+
+        section {
+
+            &:nth-of-type(1) {
+                width: 100%;
+
+                p {
+                    &:nth-of-type(2) {
+                        font-size: 2rem;
+                    }
+                }
+
+                button {
+                    padding: 1rem 3rem;
+                    margin: 3rem 0;
+                    background-color: black;
+                    color: #ffff;
+                    border: 1px solid #ffff;
+                }
+
+
+            }
+
+            &:nth-of-type(2) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                article {
+
+                    &:nth-of-type(1) {
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 2rem;
+                        }
+
+                    }
+
+                    &:nth-of-type(2) {
+                        margin-top: 3rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+    }
+
+    // ==================================
+    //         Animation Banner
+    // ====================================
+
+    .animationBanner {
+        animation-name: banner;
+        animation-timing-function: linear;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes banner {
+        0% {
+            translate: -250px;
+        }
+
+        50% {}
+
+        100% {
+            translate: 300px;
+        }
+    }
+}
